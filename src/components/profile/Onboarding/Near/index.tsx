@@ -104,11 +104,12 @@ export default function Onboarding({ closeModal }: OnboardingProps) {
         const account = await near.account(accountId)
         const contract = new Contract(account, contractId, {
           viewMethods: ['get_last_user'],
-          changeMethods: ['set_last_user']
+          changeMethods: ['set_last_user'],
+          useLocalViewExecution: true
         })
 
         const res = await (contract as any).set_last_user({ accountId })
-        console.log('Say Hi response: ', res)
+       
         fetchData(AUTH_API, {
           method: 'POST',
           headers: {
@@ -121,24 +122,24 @@ export default function Onboarding({ closeModal }: OnboardingProps) {
             chain: 'ethereum'
           }),
           onSuccessfulFetch(data) {
-            console.log('data.accessToken', data.accessToken)
+         
             sessionStorage.setItem('token', data.accessToken)
             setLogin(true)
           }
         })
       } else {
-        console.log('please await access to set')
+       
       }
     } catch (error) {
-      console.log('sayHi error: ', error)
+      
     }
   }
 
   const handleSign = async () => {
     if (message && signer) {
-      console.log(signer)
+
       const signature = await signer.signMessage(message)
-      console.log('signature', signature)
+
       if (account)
         setSignedData({
           signature: signature,
@@ -173,19 +174,17 @@ export default function Onboarding({ closeModal }: OnboardingProps) {
         methodNames: ['set_last_user', 'get_last_user']
       })
 
-      console.log('signin res: ', res)
-
       if (!res.error) {
         if (res && res.accessKey) {
           setKey(res.accessKey)
           setAccount((window as any).near.accountId)
           setIsWalletConnected(true)
         } else {
-          console.log('res: ', res)
+          
         }
       }
     } catch (error) {
-      console.log('error: ', error)
+      
     }
   }
 

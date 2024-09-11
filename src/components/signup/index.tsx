@@ -5,7 +5,7 @@ const SignUp = () => {
   const navigate = useNavigate()
 
   const handleLogin = (userAddress: string) => {
-    console.log('logged in successfully')
+
     navigate('/profile/' + userAddress)
   }
 

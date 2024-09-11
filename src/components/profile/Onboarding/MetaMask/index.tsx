@@ -57,10 +57,10 @@ export default function Onboarding({ handleLogin }: OnboardingProps) {
         setAccount(accounts[0])
         setIsWalletConnected(true)
       } catch (error) {
-        console.error('Could not get accounts', error)
+      
       }
     } else {
-      console.error('Please install MetaMask!')
+  
     }
   }
 
@@ -78,9 +78,9 @@ export default function Onboarding({ handleLogin }: OnboardingProps) {
   }
   const handleSign = async () => {
     if (message && signer) {
-      console.log(signer)
+    
       const signature = await signer.signMessage(message)
-      console.log('signature', signature)
+
       if (account)
         setSignedData({
           signature: signature,

@@ -1,6 +1,7 @@
 import PolygonLogo from '../../../assets/images/Polygon.png'
 import GitcoinLogo from '../../../assets/images/gitcoin.webp'
 import SuperteamLogo from '../../../assets/images/superteam.png'
+// '../../../assets/images/superteam.png'
 
 const BackedByList = [
   {

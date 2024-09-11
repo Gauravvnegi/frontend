@@ -58,7 +58,7 @@ export default function BrowsingHistory() {
 
   const handleBarClick = (activeBar: number) => {
     setSelectedBarData(graphData[activeBar].items)
-    console.log('selectedBarData', graphData[activeBar].items)
+  
   }
 
   const totalVisits = selectedBarData.reduce((a, b) => a + Number(b.value), 0)

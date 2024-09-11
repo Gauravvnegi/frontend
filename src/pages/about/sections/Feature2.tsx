@@ -1,9 +1,6 @@
 import { ReactComponent as QuotesIcon } from '../../../assets/images/qoutes.svg'
 import image1 from '../../../assets/images/pie_graph.svg'
 import image2 from '../../../assets/images/piechart.svg'
-
-import { image } from 'd3'
-
 export function Feature2() {
   return (
     <div className="flex-col justify-start items-center gap-2.5 flex self-stretch md:min-h-[100vh] lg:sticky lg:top-0">

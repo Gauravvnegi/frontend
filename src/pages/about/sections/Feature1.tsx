@@ -4,7 +4,6 @@ import image1 from '../../../assets/images/graph.svg'
 import { GraphBrowsingHistory } from '../../../components/mocks/LandingPage'
 
 export function Feature1() {
-  console.log('GraphBrowsingHistory', GraphBrowsingHistory)
 
   return (
     <div className="flex-col justify-start items-center gap-2.5 flex self-stretch md:min-h-[100vh] lg:sticky lg:top-0">

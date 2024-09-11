@@ -145,7 +145,7 @@ export function SummaryTabData({ domain }: SummaryTabDataProps) {
         }
       })
 
-      console.log(newData, timeData)
+    
       return newData
     }
 
@@ -212,15 +212,9 @@ export function SummaryTabData({ domain }: SummaryTabDataProps) {
       return dayOrder[a.name] - dayOrder[b.name]
     })
 
-    console.log(aggregatedData)
+
     return aggregatedData
-    // }
-    // return Object.keys(data).map((key) => {
-    //   return {
-    //     name: key,
-    //     amt: data[key].visits
-    //   }
-    // })
+
   }
 
   useEffect(() => {

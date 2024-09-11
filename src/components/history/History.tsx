@@ -126,7 +126,6 @@ export default function History() {
   }
 
   const deleteSelectedHistory = () => {
-    console.log('deleting selected history items:', selectedItems)
     deleteDataFetch(DELETE_HISTORY, {
       method: 'DELETE',
       headers: {
@@ -177,7 +176,7 @@ export default function History() {
   const filteredHistory: UrlData[] = React.useMemo(() => {
     const newFetchedItems = [...fetchedItems, ...(data || [])]
     setFetchedItems(newFetchedItems)
-    console.log(newFetchedItems.length)
+ 
 
     return (newFetchedItems || []).filter((item) => item.url.includes(search))
   }, [search, data])

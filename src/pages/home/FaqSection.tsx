@@ -74,10 +74,11 @@ export const FaqSection = () => {
                     </div>
                     {/* Toggling Plus/Minus Icon */}
                     <img
-                      src={openIndex === index ? MinusIconPath : PlusIconPath}
-                      alt={openIndex === index ? 'Minus Icon' : 'Plus Icon'}
-                      className="w-5 h-5 text-primary-600"
-                    />
+  src={openIndex === index ? MinusIconPath : PlusIconPath}
+  alt={openIndex === index ? 'Minus Icon' : 'Plus Icon'}
+  className="w-5 h-5 text-primary-600"
+/>
+
                   </button>
 
                   {/* Answer */}

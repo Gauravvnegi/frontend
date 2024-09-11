@@ -27,7 +27,6 @@ const BrowsingHistoryChart: React.FC<BrowsingHistoryChartProps> = ({
   xAxisLabel,
   yAxisLabel
 }) => {
-  console.log(browsingData)
   return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
@@ -38,7 +37,6 @@ const BrowsingHistoryChart: React.FC<BrowsingHistoryChartProps> = ({
           left: 30,
           bottom: 30
         }}
-        onClick={(e) => console.log(e)}
       >
         <defs>
           <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">

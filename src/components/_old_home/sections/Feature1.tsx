@@ -2,7 +2,6 @@ import { ReactComponent as QuotesIcon } from '../../../assets/images/qoutes.svg'
 import { GraphBrowsingHistory } from '../../mocks/LandingPage'
 import image1 from '../../../assets/images/feature1.svg'
 export function Feature1() {
-  console.log('GraphBrowsingHistory', GraphBrowsingHistory)
   return (
     <div className="flex-col justify-start items-center gap-2.5 flex self-stretch md:min-h-[100vh] lg:sticky lg:top-0">
       <div className="self-stretch bg-white justify-start items-stretch gap-6 flex flex-col lg:flex-row flex-1">
